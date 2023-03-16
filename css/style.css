@@ -1,0 +1,395 @@
+/* Small Reset */
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --login-title-font: mr-eaves-xl-modern, sans-serif;
+    --main-font: poppins, sans-serif;
+
+    --background-color: rgb(255, 255, 255);
+    --nav-color:  #E1E3EF;
+    --plan-color: #F0F1F7;
+    --darker-plan-color: #5D5E67;
+    --main-font-size: 1.3rem;
+    --sml-font-size: 1.1rem;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.logo-section {
+    height: 10vh;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+.logo-section img {
+    height: 60%;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 90vh;
+}
+
+/*  ------------------------------------------------------------------------------
+SCHÜLER UND LEHRER LOGIN STYLE*/
+.login-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 90vh;
+    width: 56rem;
+}
+
+.login-cart {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 40px;
+    
+   
+    box-shadow: 10px 10px 20px rgba(128, 128, 128, 0.469);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.student-login {
+    position: relative;
+    left: 0;
+}
+.teacher-login {
+    position: relative;
+    right: 0;
+}
+
+.login-cart p {
+
+    font-family: var(--login-title-font);
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2rem;
+
+    text-align: center;  
+}
+
+.student-login-text, .teacher-login-text{
+    height: 20rem;
+    width: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.teacher-login-text{
+    right: 0;
+}
+.student-login-text{
+    left: 0;
+}
+
+
+.log-form-sec {
+    height: auto;
+    width: 345px;
+    position: absolute;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0%;
+}
+.login-form-section-student {
+    right: 6%;
+}
+
+.login-form-section-teacher {
+    left: 6%;
+}
+
+.input {
+    width: 100%;
+    height: 56px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(70, 70, 70);
+    margin-bottom: 20px;
+
+    font-family: var(--login-title-font);
+    font-weight: 200;
+    font-size: 1.2rem;
+    padding-left: 10px;  
+}
+
+#submit-btn {
+    background-color: #E2E4F0;
+    border: none;
+}
+#submit-btn:hover {
+    background-color: #c6ccee;
+}
+
+.registration {
+    font-family: var(--login-title-font);
+    font-weight: 200;
+    font-size: 1rem;
+}
+.registration a {
+    color: black;
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------
+NAVIGATION STYLE*/
+
+/* NAVIGATION BAR */
+.nav-background {
+    position: absolute;
+    top: 40px;
+    left: -1vw;
+    z-index: -1;
+    background-color: var(--nav-color);
+    height: 200px;
+    width: 102vw;
+    transform: rotate(3deg);
+}
+
+#navbar {
+    width: 101vw;
+    margin-top: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item-list {
+    width: 100vw;
+    height: auto;
+    
+    display: flex;
+    justify-content: space-around;   
+}
+
+.dropdown-container a{
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: var(--main-font-size);
+    text-decoration: none;
+    color: #505050;
+
+    height: fit-content;
+    padding: 1rem;
+    
+}
+
+
+.dropdown-list{
+    list-style: none;
+    padding-top: 1rem;
+    position: absolute; 
+    width: 25%; 
+    
+    
+    visibility: hidden;
+    opacity: 0;
+}
+.dropdown-list li{
+    padding-top: 0.5rem;
+}
+.dropdown-list a {
+    font-weight: 300;
+    opacity: 70%;
+}
+.dropdown-list a:hover {
+    color: blue;
+}
+
+.dropdown-list li .small-subtitles {
+    font-weight: 100;
+    font-size: var(--sml-font-size);
+    margin-left: 0.3rem;
+}
+
+/*  ------------------------------------------------------------------------------
+LEHRERPORTAL */
+
+
+
+
+/* STUNDENPLANER STYLE */
+#stundenplaner-body {
+    height: 100vh;
+    
+}
+.stundenplaner-content-section {
+    display: flex;
+    align-items: flex-end;
+    height: 80vh;
+    overflow: scroll;
+
+}
+
+/* slider für die Stundenpläne */
+.slideshow-container {
+    z-index: -9999999;
+    height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.slider-arrows {
+    position: absolute;
+    
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.next, .prev {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.next:hover, .prev:hover {
+    background-color: var(--plan-color);
+    cursor: pointer;
+}
+
+.slide {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Style für einen Plan */
+/* Head Section mit Datum */
+.plan-head {
+    position: relative;
+    top: 2rem;
+    left: -3rem;
+    width: 350px;
+    height: 90px;
+    background-color: var(--darker-plan-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.plan-head h3 {
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: white;
+    width: 60%;
+    text-align: center;
+    font-size: var(--main-font-size);
+}
+
+
+/* Content Section mit Lektionen und mehr Information zum Inhalt */
+.plan-content {
+    width: 650px;
+    height: 500px;
+    background-color: var(--plan-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-lesson {
+    width: 90%;
+    height: 50%;
+    position: relative;
+    top: 3rem;
+}
+
+.lesson-title {
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    font-weight: 200;
+    width: 100%;
+    opacity: 50%;
+    border-bottom: 1px solid var(--darker-plan-color);
+}
+
+.lesson-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lesson-content div {
+    width: 50%;
+    font-family: var(--main-font);
+    font-size: var(--sml-font-size);
+    font-weight: 200;
+}
+
+.lesson-content div .title {
+    opacity: 50%;
+}
+.todo, .material {
+    font-size: 1rem;
+}
+
+/* Edit Section mit Funktionen zur Bearbeitung */
+.plan-edit {
+    position: relative;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 580px;
+    height: 50px;
+    background-color: var(--darker-plan-color);
+
+    font-family: var(--main-font);
+    font-size: var(--sml-font-size);
+    font-weight: 300;
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.plan-edit p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: underline;
+}
+.plan-edit p:hover {
+    cursor: pointer;
+}
+
+.plan-edit i {
+    margin-right: 0.3rem;
+}
